@@ -5,3 +5,7 @@
  */
 
 // You can delete this file if you're not using it
+require("prismjs/themes/prism-tomorrow.css")
+
+// For line numbering
+require("prismjs/plugins/line-numbers/prism-line-numbers.css") 

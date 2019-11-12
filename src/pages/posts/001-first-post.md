@@ -9,3 +9,11 @@ tags:
 ---
 
 Welcome to Code Blog, I hope you enjoy our content!
+
+```python
+
+import os
+
+print('Hello World')
+
+```
