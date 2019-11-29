@@ -1,10 +1,105 @@
 .container#content {
   margin-top: 60px;
 }
+
 body {
-  background-color: $light-gray;
   font-family: $site-font;
 }
+
+body.light-mode {
+  background-color: $light-gray;
+  color: #333;
+  transition: background-color 0.3s ease;
+
+  .navbar {
+    background-color: white;
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-brand {
+    color: black;
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+}
+
+body.dark-mode {
+  background-color: $dark-background;
+  color: $silver-color;
+  transition: background-color 0.3s ease;
+
+  .navbar {
+    background-color: #252627;
+    
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-brand {
+    color: white;
+    &:hover {
+      color: #007bff;
+    }
+  }
+
+  .dark-mode-toggle > button {
+    color: #999;
+    &:last-child {
+      color: lightblue;
+    }
+  }
+
+  .site-footer, 
+  .card {
+    background-color: $dark-mode;
+  }
+
+
+  .page-link { 
+    position: relative; 
+    display: block; 
+    padding: 0.5rem 0.75rem; 
+    margin-left: -1px; 
+    line-height: 1.25; 
+    border: 1px solid $silver-color; 
+  }
+  
+  .page-item.disabled .page-link { 
+    pointer-events: none; 
+    cursor: auto; 
+    // background-color: #CEFFCE; 
+    border-color: $silver-color;
+  }
+
+  // https://stackoverflow.com/questions/32355009/changing-pagination-colour-bootstrap
+  // https://stackoverflow.com/questions/39497804/cant-change-bootstrap-pagination-color
+  .pagination > li > a {
+    background-color: $dark-mode;
+    // color: $dark-mode;
+    // background: $dark-mode;
+  }
+
+  .pagination li:not(.active) a {
+    background-color: $dark-mode;
+  }
+
+  .pagination > li > a:focus,
+  .pagination > li > a:hover,
+  .pagination > li > span:focus,
+  .pagination > li > span:hover
+  {
+      background-color: #eee;
+      border-color: #ddd;
+  }
+}
+
 a {
   color: #0056b3;
   &:hover {
@@ -14,24 +109,50 @@ a {
 }
 
 h1 {
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+  padding-top: 1em;
   text-align: center;
 }
-.navbar {
-  background-color: white;
-  // border-right: 1px solid rgba(0, 0, 0, 0.4);
-  // border-left: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  line-height: 1;
-}
+
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
-  color: #0056b3;
-  &:hover {
-    color: #007bff;
-  }
+  font-size: 1.3em;
 }
+
+
 ul {
   list-style: none;
   padding: 0;
+}
+
+// body.dark-mode #content code {
+//   background-color: #1b2938;
+// }
+
+// body.dark-mode #content a {
+//   color: #ee09;
+// }
+
+// body.dark-mode #content button {
+//   color: #ee09;
+// }
+
+.dark-mode-toggle {
+  display: flex;
+  margin: 0 auto;
+  & > button {
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    color: #ffe600;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:last-child {
+      color: #666;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

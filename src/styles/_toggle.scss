@@ -1,0 +1,109 @@
+// -- vars
+
+$multiplier: 0.8em;
+$height: 30 / 16 * $multiplier;
+$width: 63 / 16 * $multiplier;
+
+$color-white: #fefefe;
+$color-clouds: #ecf0f1;
+$color-silver: #bdc3c7;
+$color-peter-river: #3498db;
+$color-carrot: $color-silver;
+
+$transition-default: 0.25s ease-out 0.10s;
+
+.button-switch {
+  font-size: 1.5em;
+  height: $height;
+  // margin-bottom: 10 / 16 * $multiplier;
+  margin: 0.55em 0 0 0.55em;
+  position: relative;
+  width: $width;
+
+  .lbl-off,
+  .lbl-on {
+    cursor: pointer;
+    display: block;
+    font-size: 0.5em;
+    font-weight: bold;
+    line-height: $multiplier;
+    position: absolute;
+    top: 6 / 16 * $multiplier;
+    transition: opacity $transition-default;
+    text-transform: uppercase;
+  }
+
+  .lbl-off {
+    color: $color-white;
+    // opacity: 0;
+    right: 70 / 16 * $multiplier;
+  }
+
+  .lbl-on {
+    color: $color-white;
+    opacity: 0;
+    left: 7 / 16 * $multiplier;
+  }
+
+  .switch {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    // --
+    height: 0;
+    font-size: $multiplier;
+    left: 0;
+    line-height: 0;
+    outline: none;
+    position: absolute;
+    top: 0;
+    width: 0;
+
+    &:before,
+    &:after {
+      content: '';
+      font-size: $multiplier;
+      position: absolute;
+    }
+
+    &:before {
+      border-radius: 20 / 16 * $multiplier;
+      background: #696969;
+      height: $height;
+      left: 4 / 16 * -$multiplier;
+      top: 3 / 16 * -$multiplier;
+      transition: background-color $transition-default;
+      width: $width;
+    }
+
+    &:after {
+      box-shadow: 0 .0625em .375em 0 #666;
+      border-radius: 50%;
+      background: $color-white;
+      height: 24 / 16 * $multiplier;
+      transform: translate(0, 0);
+      transition: transform $transition-default;
+      width: 24 / 16 * $multiplier;
+    }
+
+    &:checked {
+      &:after {
+        transform: translate(30 / 16 * $multiplier, 0);
+      }
+
+      & ~ .lbl-off {
+        opacity: 0;
+      }
+
+      & ~ .lbl-on {
+        opacity: 1;
+      }
+    }
+
+    &#switch-color {
+      &:checked:before {
+        background: $silver-color;
+      }
+    }
+  }
+}

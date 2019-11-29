@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import ToggleMode from './ToggleMode';
 
 import {
   Collapse,
@@ -39,6 +40,9 @@ class Header extends React.Component {
                 </NavItem>
                 <NavItem>
                   <NavLink href="/about">About</NavLink>
+                </NavItem>
+                <NavItem>
+                  <ToggleMode />
                 </NavItem>
               </Nav>
             </Collapse>
