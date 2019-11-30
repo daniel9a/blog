@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
+import ScrollButton from './ScrollButton'
 import '../styles/index.scss'
 
 import { Row, Col } from 'reactstrap'
@@ -37,7 +38,9 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => (
               <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
             </Col>
           </Row>
+          <ScrollButton scrollStepInPx="50" delayInMs="16.66" />
         </div>
+
         <Footer />
       </>
     )}
