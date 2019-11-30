@@ -106,14 +106,16 @@ const Sidebar = ({ author, authorFluid }) => (
         <StaticQuery
           query={sidebarQuery}
           render={data => (
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <ul>
-                  <Link to={node.fields.slug}>
-                    {node.frontmatter.title}
-                  </Link>
-                </ul>
-              ))}
+            <div className="post-list">
+              <ul>
+                {data.allMarkdownRemark.edges.map(({ node }) => (
+                  <li>
+                    <Link to={node.fields.slug}>
+                      {node.frontmatter.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         />
