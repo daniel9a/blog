@@ -98,6 +98,15 @@ body.dark-mode {
       border-color: #ddd;
   }
 
+  .scroll {
+    background-color: $silver-color;
+  }
+  .fa {
+    color: $dark-mode;
+    font-size: 1.3em;
+    font-weight: 900;
+  }
+
   a {
     color: white;
     &:hover {
