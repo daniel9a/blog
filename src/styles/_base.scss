@@ -13,6 +13,7 @@ body.light-mode {
 
   .navbar {
     background-color: white;
+    transition: background-color 0.3s ease;
     &:hover {
       color: #007bff;
     }
@@ -35,7 +36,7 @@ body.dark-mode {
 
   .navbar {
     background-color: #252627;
-    
+    transition: background-color 0.3s ease;
     &:hover {
       color: #007bff;
     }
@@ -59,6 +60,7 @@ body.dark-mode {
   .site-footer, 
   .card {
     background-color: $dark-mode;
+    transition: background-color 0.3s ease;
   }
 
 
@@ -74,7 +76,6 @@ body.dark-mode {
   .page-item.disabled .page-link { 
     pointer-events: none; 
     cursor: auto; 
-    // background-color: #CEFFCE; 
     border-color: $silver-color;
   }
 
@@ -82,8 +83,6 @@ body.dark-mode {
   // https://stackoverflow.com/questions/39497804/cant-change-bootstrap-pagination-color
   .pagination > li > a {
     background-color: $dark-mode;
-    // color: $dark-mode;
-    // background: $dark-mode;
   }
 
   .pagination li:not(.active) a {
