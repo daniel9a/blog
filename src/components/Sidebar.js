@@ -6,8 +6,12 @@ import {
   CardText,
   Form,
   FormGroup,
-  Input,
+  Input
 } from 'reactstrap'
+// import Tags from './tags'
+// import { Badge, Button } from 'reactstrap'
+// import { slugify } from '../util/utilityFunctions'
+
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -58,6 +62,7 @@ const Sidebar = ({ author, authorFluid }) => (
         </CardBody>
       </Card>
     )}
+    {/* Newsletter signup */}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
@@ -71,12 +76,13 @@ const Sidebar = ({ author, authorFluid }) => (
               placeholder="Your email address.."
             />
           </FormGroup>
-          <button className="btn btn-outline-success text-uppercase">
+          <button className="btn btn-success text-uppercase">
             Subscribe
           </button>
         </Form>
       </CardBody>
     </Card>
+    {/* Advertisement */}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase">
@@ -89,6 +95,9 @@ const Sidebar = ({ author, authorFluid }) => (
         />
       </CardBody>
     </Card>
+    {/* Tags */}
+
+    {/* Recent Posts */}
     <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
@@ -99,21 +108,11 @@ const Sidebar = ({ author, authorFluid }) => (
           render={data => (
             <div>
               {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Card key={node.id}>
+                <ul>
                   <Link to={node.fields.slug}>
-                    <Img
-                      className="card-image-top"
-                      fluid={node.frontmatter.image.childImageSharp.fluid}
-                    />
+                    {node.frontmatter.title}
                   </Link>
-                  <CardBody>
-                    <CardTitle>
-                      <Link to={node.fields.slug}>
-                        {node.frontmatter.title}
-                      </Link>
-                    </CardTitle>
-                  </CardBody>
-                </Card>
+                </ul>
               ))}
             </div>
           )}
@@ -134,6 +133,7 @@ const sidebarQuery = graphql`
           id
           frontmatter {
             title
+            tags
             image {
               childImageSharp {
                 fluid(maxWidth: 300) {

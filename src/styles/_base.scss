@@ -98,10 +98,18 @@ body.dark-mode {
       background-color: #eee;
       border-color: #ddd;
   }
+
+  a {
+    color: white;
+    &:hover {
+      color: #007bff;
+      text-decoration: none;
+    }
+  }
 }
 
 a {
-  color: #0056b3;
+  color: black;
   &:hover {
     color: #007bff;
     text-decoration: none;
