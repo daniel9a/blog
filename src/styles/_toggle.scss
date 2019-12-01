@@ -68,7 +68,7 @@ $transition-default: 0.25s ease-out 0.10s;
 
     &:before {
       border-radius: 20 / 16 * $multiplier;
-      background: #696969;
+      background: $dark-gray;
       height: $height;
       left: 4 / 16 * -$multiplier;
       top: 3 / 16 * -$multiplier;

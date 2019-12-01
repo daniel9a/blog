@@ -33,8 +33,8 @@ const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => (
         <div className="container" id="content">
           <h1>{pageTitle}</h1>
           <Row>
-            <Col md="8">{children}</Col>
-            <Col md="4">
+            <Col md="9">{children}</Col>
+            <Col md="3">
               <Sidebar author={postAuthor} authorFluid={authorImageFluid} />
             </Col>
           </Row>

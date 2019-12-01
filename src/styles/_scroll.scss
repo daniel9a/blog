@@ -1,5 +1,5 @@
 .scroll {
-  background-color: $dark-mode;
+  background-color: $dark-gray;
   width: 3em;
   height: 3em;
   position: fixed;
@@ -11,7 +11,7 @@
 
   &:hover {
     opacity: 0.5;
-    box-shadow: 0 0 0 5px rgba(#fff,.4) , 0 0 0 10px  #bec4e2;
+    // box-shadow: 0 0 0 5px rgba(#fff,.4) , 0 0 0 10px  #bec4e2;
   }
 }
 

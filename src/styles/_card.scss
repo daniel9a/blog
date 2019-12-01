@@ -1,5 +1,12 @@
 .card {
   margin-bottom: 30px;
+  
+  .list {
+    ul {
+      margin-left: 1em;
+      list-style-type: disc;
+    }
+  }
 }
 
 ul.post-tags {
