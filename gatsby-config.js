@@ -1,3 +1,36 @@
+require("dotenv").config({
+  // path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.production`,
+})
+
+// gatsby-config.js
+const myQuery = `{
+    allMarkdownRemark {
+    nodes {
+      frontmatter {
+        author
+        date
+        path
+        tags
+        title
+      }
+      fields {
+        slug
+      }
+      html
+    }
+  }
+}
+`
+
+const queries = [
+  {
+    query: myQuery,
+    transformer: ({ data }) => data.allMarkdownRemark.nodes, // optional
+    indexName: process.env.ALGOLIA_INDEX_NAME,
+  },
+]
+
 module.exports = {
   siteMetadata: {
     title: `Blog`,
@@ -11,28 +44,37 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
-    // `gatsby-transformer-remark`,
     {
-      resolve: 'gatsby-plugin-use-dark-mode',
+      resolve: `gatsby-plugin-algolia`,
       options: {
-        classNameDark: 'dark-mode',
-        classNameLight: 'light-mode',
-        storageKey: 'darkMode',
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
+    {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
         minify: true,
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-prismjs',
+            resolve: "gatsby-remark-prismjs",
             options: {
               // showLineNumbers: true
             },
           },
         ],
-      }
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
