@@ -1,12 +1,12 @@
 ---
-title: 'Second post - HTML'
+title: 'Second post - Random'
 date: 2019-11-07 07:00:00
 author: 'Jane Doe'
 path: '/second-post'
-image: ../../images/python.png
+image: ../../images/ran_pic.jpg
 tags:
 - code
 - design
 ---
 
-Today we will learn HTML 5 Today we will learn HTML 5 Today we will learn HTML 5 Today we will learn HTML 5 Today we will learn HTML 5
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
