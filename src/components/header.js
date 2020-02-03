@@ -50,7 +50,7 @@ class Header extends React.Component {
                 <NavItem>
                   <ToggleMode />
                 </NavItem>
-                <NavItem>
+                <NavItem className="align-middle">
                   {/* <Search /> */}
                   <Search collapse indices={searchIndices} />
                 </NavItem>

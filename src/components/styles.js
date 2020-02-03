@@ -11,19 +11,28 @@ export const Root = styled.div`
 `
 
 export const SearchIcon = styled(Search)`
-  width: 1em;
+  margin-top: 0.7em;
+  width: 1.4em;
   pointer-events: none;
   color: white;
 `
 
 const focus = css`
-  background: white;
   color: ${props => props.theme.darkerBlue};
   cursor: text;
-  width: 5em;
+  width: 16em;
+  margin-top: 0.45em;
+  border-radius: 0.8em;
+  + light-mode {
+    background: black;
+    color: white;
+  }
+  + dark-mode {
+    background: white;
+    color: black;
+  }
   + ${SearchIcon} {
-    color: ${props => props.theme.darkerBlue};
-    margin: 0 0.3em;
+    opacity: 0;
   }
 `
 
