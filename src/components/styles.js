@@ -1,5 +1,5 @@
 import React from "react"
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import { Algolia } from "styled-icons/fa-brands/Algolia"
 import { Search } from "styled-icons/fa-solid/Search"
 
@@ -17,57 +17,6 @@ export const SearchIcon = styled(Search)`
   color: white;
 `
 
-const focus = css`
-  color: ${props => props.theme.darkerBlue};
-  cursor: text;
-  width: 16em;
-  margin-top: 0.45em;
-  border-radius: 0.8em;
-  + light-mode {
-    background: black;
-    color: white;
-  }
-  + dark-mode {
-    background: white;
-    color: black;
-  }
-  + ${SearchIcon} {
-    opacity: 0;
-  }
-`
-
-const collapsed = css`
-  width: 0;
-  cursor: pointer;
-  color: ${props => props.theme.lighterBlue};
-  ${props => props.focus && focus}
-  margin-left: ${props => (props.focus ? `-1.6em` : `-1em`)};
-  padding-left: ${props => (props.focus ? `1.6em` : `1em`)};
-  ::placeholder {
-    color: ${props => props.theme.gray};
-  }
-`
-
-const expanded = css`
-  background: ${props => props.theme.lighterGray};
-  width: 6em;
-  margin-left: -1.6em;
-  padding-left: 1.6em;
-  + ${SearchIcon} {
-    margin: 0.3em;
-  }
-`
-
-export const Input = styled.input`
-  outline: none;
-  border: none;
-  font-size: 1em;
-  background: transparent;
-  transition: 0.3s;
-  border-radius: ${props => props.theme.smallBorderRadius};
-  ${props => (props.collapse ? collapsed : expanded)};
-`
-
 export const Form = styled.form`
   display: flex;
   flex-direction: row-reverse;
@@ -76,7 +25,8 @@ export const Form = styled.form`
 
 export const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
-  background: ${props => props.theme.background};
+  
+  background: white;
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
@@ -99,15 +49,17 @@ export const HitsWrapper = styled.div`
     border-top: 1px solid ${props => props.theme.lighterGray};
   }
   mark {
-    color: ${props => props.theme.lighterBlue};
-    background: ${props => props.theme.darkerBlue};
+    
+    color: DarkGrey;
+    
+    background: white;
   }
   header {
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid ${props => props.theme.darkGray};
     h3 {
-      color: white;
+      color: black;
       background: ${props => props.theme.gray};
       padding: 0.1em 0.4em;
       border-radius: ${props => props.theme.smallBorderRadius};
@@ -118,6 +70,7 @@ export const HitsWrapper = styled.div`
     padding-top: 1em;
   }
   h4 {
+    color: black;
     margin-bottom: 0.3em;
   }
 `

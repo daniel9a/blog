@@ -47,14 +47,15 @@ class Header extends React.Component {
                 <NavItem>
                   <NavLink href="/contact">Contact</NavLink>
                 </NavItem>
+                
                 <NavItem>
                   <ToggleMode />
                 </NavItem>
                 <NavItem className="align-middle">
-                  {/* <Search /> */}
                   <Search collapse indices={searchIndices} />
                 </NavItem>
               </Nav>
+              
             </Collapse>
           </div>
         </Navbar>

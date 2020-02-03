@@ -27,6 +27,10 @@ body.light-mode {
     }
   }
 
+  .search {
+    border-color: $dark-gray;
+  }
+
 }
 
 body.dark-mode {
@@ -48,6 +52,10 @@ body.dark-mode {
     &:hover {
       color: #007bff;
     }
+  }
+
+  .search {
+    border-color: white;
   }
 
   .dark-mode-toggle > button {
@@ -171,4 +179,8 @@ ul {
       outline: none;
     }
   }
+}
+
+.search {
+  border-radius: 1em;
 }

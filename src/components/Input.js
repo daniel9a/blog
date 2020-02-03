@@ -1,11 +1,11 @@
 import React from "react"
 import { connectSearchBox } from "react-instantsearch-dom"
-
-import { SearchIcon, Form, Input } from "./styles"
+import {Form, Input } from 'reactstrap';
 
 export default connectSearchBox(({ refine, ...rest }) => (
   <Form>
     <Input
+      className="search" 
       type="text"
       placeholder="Search"
       aria-label="Search"
@@ -14,6 +14,5 @@ export default connectSearchBox(({ refine, ...rest }) => (
       onMouseLeave={e => e.target.blur()}
       {...rest}
     />
-    <SearchIcon />
   </Form>
 ))
