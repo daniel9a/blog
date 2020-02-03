@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import ToggleMode from './ToggleMode';
+import PropTypes from "prop-types"
+import React from "react"
+import ToggleMode from "./ToggleMode"
+import Search from "./search"
 
 import {
   Collapse,
@@ -10,7 +11,9 @@ import {
   Nav,
   NavItem,
   NavLink,
-} from 'reactstrap'
+} from "reactstrap"
+
+const searchIndices = [{ name: `Posts`, title: `Blog Posts`, type: `postHit` }]
 
 class Header extends React.Component {
   constructor(props) {
@@ -46,6 +49,10 @@ class Header extends React.Component {
                 </NavItem>
                 <NavItem>
                   <ToggleMode />
+                </NavItem>
+                <NavItem>
+                  {/* <Search /> */}
+                  <Search collapse indices={searchIndices} />
                 </NavItem>
               </Nav>
             </Collapse>

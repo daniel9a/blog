@@ -3,33 +3,7 @@ require("dotenv").config({
   path: `.env.production`,
 })
 
-// gatsby-config.js
-const myQuery = `{
-    allMarkdownRemark {
-    nodes {
-      frontmatter {
-        author
-        date
-        path
-        tags
-        title
-      }
-      fields {
-        slug
-      }
-      html
-    }
-  }
-}
-`
-
-const queries = [
-  {
-    query: myQuery,
-    transformer: ({ data }) => data.allMarkdownRemark.nodes, // optional
-    indexName: process.env.ALGOLIA_INDEX_NAME,
-  },
-]
+const queries = require("./src/util/algolia")
 
 module.exports = {
   siteMetadata: {
@@ -44,6 +18,11 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-polished`,
+    },
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
