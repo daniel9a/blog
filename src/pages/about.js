@@ -7,7 +7,6 @@ const AboutPage = () => (
   <Layout pageTitle="About us">
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
     <Card>
-      {/* <img className="card-img-top" src={python} /> */}
       <CardHeader><h1 className="text-center">About the Author</h1></CardHeader>
       <CardBody>
         <CardSubtitle><h3>About Me</h3></CardSubtitle>

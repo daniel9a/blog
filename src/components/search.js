@@ -10,8 +10,6 @@ import { HitsWrapper, PoweredBy, Root } from "./styles"
 import Hits from "./Hits"
 import Input from "./Input"
 
-// https://janosh.io/blog/gatsby-algolia-search
-
 const Results = connectStateResults(
   ({ searching, searchState: state, searchResults: res }) => (
     <div>
@@ -57,7 +55,6 @@ export default function Search({ indices, collapse = true, hitsAsGrid }) {
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
-        // {process.env.ALGOLIA_INDEX_NAME}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />

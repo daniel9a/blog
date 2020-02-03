@@ -8,9 +8,6 @@ import {
   FormGroup,
   Input
 } from 'reactstrap'
-// import Tags from './tags'
-// import { Badge, Button } from 'reactstrap'
-// import { slugify } from '../util/utilityFunctions'
 
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'

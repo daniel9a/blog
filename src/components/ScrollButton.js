@@ -25,8 +25,6 @@ export class ScrollButton extends Component {
     return <button title='Back to top' className='scroll'
       onClick={() => { this.scrollToTop(); }}>
       <i class="fa fa-chevron-up arrow-up" aria-hidden="true"></i>
-
-      {/* <span className='arrow-up glyphicon glyphicon-chevron-up'></span> */}
     </button>;
   }
 }
