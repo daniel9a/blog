@@ -48,7 +48,7 @@ export default function Search({ indices, collapse = true, hitsAsGrid }) {
   // Avoids unnecessary XHR requests (see https://tinyurl.com/yyj93r2s).
   const searchClient = useMemo(
     () =>
-      algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_API_KEY),
+      algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_API_KEY),
     []
   )
   useOnClickOutside(ref, () => setFocus(false))
