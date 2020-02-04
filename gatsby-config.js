@@ -1,3 +1,5 @@
+const config = require('./config')
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -6,9 +8,10 @@ const queries = require("./src/util/algolia")
 
 module.exports = {
   siteMetadata: {
-    title: `Blog`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `Daniel Andrade`,
+    title: config.siteTitle,
+    description: config.description,
+    author: config.author,
+    siteUrl: config.siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

@@ -80,7 +80,7 @@ const Sidebar = ({ author, authorFluid }) => (
       </CardBody>
     </Card>
     {/* Advertisement */}
-    <Card>
+    {/* <Card>
       <CardBody>
         <CardTitle className="text-center text-uppercase">
           Advertisement
@@ -91,7 +91,8 @@ const Sidebar = ({ author, authorFluid }) => (
           style={{ width: '100%' }}
         />
       </CardBody>
-    </Card>
+    </Card> */}
+
     {/* Tags */}
 
     {/* Recent Posts */}

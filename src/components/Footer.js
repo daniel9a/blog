@@ -1,14 +1,16 @@
 import React from 'react'
 
+import config from '../../config';
+
 const Footer = () => (
   <div className="site-footer">
-    <h4 className="text-center">Blog</h4>
+    <h4 className="text-center"><a href="/">{config.siteTitle}</a></h4>
     <p className="text-center">Follow me on social media</p>
     <div className="footer-social-links">
       <ul className="social-links-list">
         <li>
           <a
-            href="https://www.github.com"
+            href={config.userGithub ? config.userGithub : "https://www.github.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="github"
@@ -18,7 +20,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.google.com"
+            href={config.userGooglePlus ? config.userGooglePlus : "https://www.google.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="google"
@@ -28,7 +30,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.linkedin.com"
+            href={config.userLinkedIn ? config.userLinkedIn : "https://www.linkedin.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin"
@@ -38,7 +40,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.facebook.com"
+            href={config.userFaceBook ? config.userFaceBook :"https://www.facebook.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="facebook"
@@ -48,7 +50,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.instagram.com"
+            href={config.userInstragram ? config.userInstragram :"https://www.instagram.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="instagram"
@@ -58,7 +60,7 @@ const Footer = () => (
         </li>
         <li>
           <a
-            href="https://www.twitter.com"
+            href={config.userTwitter ? config.userTwitter :"https://www.twitter.com/"}
             target="_blank"
             rel="noopener noreferrer"
             className="twitter"
@@ -68,6 +70,7 @@ const Footer = () => (
         </li>
       </ul>
     </div>
+<p className="text-center">{config.copyright}</p>
   </div>
 )
 

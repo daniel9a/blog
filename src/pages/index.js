@@ -4,9 +4,10 @@ import SEO from '../components/seo'
 import { graphql, StaticQuery } from 'gatsby'
 import Post from '../components/Post'
 import PaginationLinks from '../components/PaginationLinks'
+import config from '../../config'
 
 const IndexPage = () => {
-  const postsPerPage = 2
+  const postsPerPage = config.postsPerPage
   let numberOfPages
   return (
     <Layout pageTitle="Blog">

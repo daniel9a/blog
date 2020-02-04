@@ -7,7 +7,7 @@ const AboutPage = () => (
   <Layout pageTitle="About us">
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
     <Card>
-      <CardHeader><h1 className="text-center">About the Author</h1></CardHeader>
+      <CardHeader><h1 className="text-center">About Me</h1></CardHeader>
       <CardBody>
         <CardSubtitle><h3>About Me</h3></CardSubtitle>
         <p>

@@ -1,7 +1,7 @@
 ---
 title: 'Second post - Random'
 date: 2019-11-07 07:00:00
-author: 'Jane Doe'
+author: 'John Doe'
 path: '/second-post'
 image: ../../images/ran_pic.jpg
 tags:
