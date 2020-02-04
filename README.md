@@ -1,11 +1,5 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's Starter My Blog
+  Gatsby Starter My Blog
 </h1>
 
 <p align="center">
@@ -18,18 +12,18 @@
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs are welcomed" />
 </p>
 
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/cbd05012-b4f9-44e9-854b-e59db1463335/deploy-status)](https://app.netlify.com/sites/sleepy-aryabhata-daee42/deploys) -->
+See the starter in action » https://sleepy-aryabhata-daee42.netlify.com/ 
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## 🔎 Description
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+A [GatsbyJS](https://www.gatsbyjs.org/) starter Blog
 
 ## ✨ Features
 
 - [Gatsby v2](https://www.gatsbyjs.org/)
 - [Netlify CMS](https://www.netlifycms.org/) for Content Management
 - [Netlify](https://www.netlify.com) Deployment Friendly
-- [Scss](https://sass-lang.com/) for styling
+- [Scss](https://sass-lang.com/) and [Styled-Components](https://styled-components.com/) for styling
 - Icons from [font-awesome](https://fontawesome.com/)
 - [Algolia](https://www.algolia.com/) for search
 - Pagination
