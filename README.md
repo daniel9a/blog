@@ -12,11 +12,11 @@
 <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs are welcomed" />
 </p>
 
-See the starter in action » https://sleepy-aryabhata-daee42.netlify.com/ 
-
 ## 🔎 Description
 
 A [GatsbyJS](https://www.gatsbyjs.org/) starter Blog
+
+See the starter in action » https://sleepy-aryabhata-daee42.netlify.com/ 
 
 ## ✨ Features
 
@@ -65,6 +65,10 @@ GATSBY_ALGOLIA_API_KEY=XXX
 - Pick an tndex name you wish to call it for GATSBY_ALGOLIA_INDEX_NAME (I have mine as <em>Gatsby-Blog</em>)
 
 When deploying to Netlify with Algolia you need to go to your website then **Site Settings > Build & Deploy > Environment** and add your environment variables here with the same variable name.
+
+#### Config File
+
+Change the settings in `config.js` to your liking.
 
 #### Running Wesbite
 
