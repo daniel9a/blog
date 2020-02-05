@@ -6,6 +6,7 @@ import { Badge, Card, CardBody, CardSubtitle } from 'reactstrap'
 import Img from 'gatsby-image'
 import { slugify } from '../util/utilityFunctions'
 import authors from '../util/authors'
+import { Calendar } from "styled-icons/octicons/Calendar"
 // import { DiscussionEmbed } from 'disqus-react'
 
 const SinglePost = ({ data, pageContext }) => {
@@ -37,6 +38,8 @@ const SinglePost = ({ data, pageContext }) => {
         />
         <CardBody>
           <CardSubtitle>
+            <Calendar size="1em" />
+            &nbsp;
             <span className="text-info">{post.date}</span> by{' '}
             <span className="text-info">{post.author}</span>
           </CardSubtitle>
