@@ -58,7 +58,7 @@ export default function Search({ indices, collapse = true, hitsAsGrid }) {
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
-        <HitsWrapper show={query.length > 0 && focus} asGrid={hitsAsGrid}>
+        <HitsWrapper className="hits-wrapper" show={query.length > 0 && focus} asGrid={hitsAsGrid}>
           {indices.map(({ name, title, type }) => (
             <Index key={name} indexName={name}>
               <header>

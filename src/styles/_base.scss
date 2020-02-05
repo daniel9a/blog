@@ -58,6 +58,21 @@ body.dark-mode {
     border-color: white;
   }
 
+  // .algolia {
+  //   color: black;
+  // }
+
+  .hits-wrapper {
+    background: black;
+    color: white;
+    h4 {
+      color: white;
+    }
+    h3 {
+      color: white;
+    }
+  }
+
   .dark-mode-toggle > button {
     color: #999;
     &:last-child {
