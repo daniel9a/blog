@@ -40,7 +40,7 @@ const SinglePost = ({ data, pageContext }) => {
             <span className="text-info">{post.date}</span> by{' '}
             <span className="text-info">{post.author}</span>
           </CardSubtitle>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+          <div className="mt-4" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags">
             {post.tags.map(tag => (
               <li key={tag}>

@@ -17,7 +17,7 @@ const Post = ({ title, author, slug, date, body, fluid, tags }) => (
       <Img className="card-image-top" fluid={fluid} />
     </Link>
     <CardBody>
-      <CardTitle>
+      <CardTitle className="post-title">
         <Link to={slug}>{title}</Link>
       </CardTitle>
       <CardSubtitle>
